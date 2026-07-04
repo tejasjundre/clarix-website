@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Clarix Digitech company website",
+  "private": true,
+  "scripts": {
+    "dev": "node server.mjs --dev",
+    "build": "vite build",
+    "preview": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "motion": "^12.42.0",
+    "nodemailer": "^9.0.3"
+  },
+  "devDependencies": {
+    "vite": "^8.1.0"
+  }
+}
