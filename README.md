@@ -16,7 +16,7 @@ Website enquiries submit to:
 POST /api/enquiries
 ```
 
-Submissions are saved to `data/enquiries.ndjson`. If SMTP is configured, the server also forwards each enquiry to `FORM_TO_EMAIL`.
+Local development uses `server.mjs`, which can save submissions to `data/enquiries.ndjson`. Production on Netlify uses `netlify/functions/enquiries.mjs`, which sends enquiries by email through SMTP.
 
 ## Email setup
 
@@ -32,9 +32,11 @@ SMTP_PASS=your-app-password
 SMTP_FROM_EMAIL=Clarix Digitech <your-email@clarixdigitech.com>
 ```
 
-For production:
+For local production testing:
 
 ```powershell
 npm run build
 npm start
 ```
+
+For live hosting with `clarixdigitech.com`, follow `deploy-instructions.md`.
