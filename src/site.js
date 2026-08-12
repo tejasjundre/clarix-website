@@ -12,8 +12,8 @@ const navSections = [
   { id: "home", label: "Home" },
   { id: "what-we-do", label: "What We Do" },
   { id: "features", label: "Features" },
-  { id: "students", label: "Students" },
   { id: "why-clarix", label: "Why Clarix" },
+  { id: "careers", label: "Careers", href: "careers.html" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -22,6 +22,8 @@ const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: r
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
 const sectionHref = (id) => (isHomePage ? `#${id}` : `index.html#${id}`);
+
+const navHref = (section) => section.href || sectionHref(section.id);
 
 const readStorage = (key) => {
   try {
@@ -60,7 +62,11 @@ const renderHeader = () => {
   const links = navSections
     .map(
       (section) => `
-        <a class="nav-link" href="${sectionHref(section.id)}" data-nav-target="${section.id}">
+        <a
+          class="nav-link${section.href === currentFile ? " is-active" : ""}"
+          href="${navHref(section)}"
+          ${section.href ? "" : `data-nav-target="${section.id}"`}
+        >
           ${section.label}
         </a>
       `
@@ -87,7 +93,6 @@ const renderHeader = () => {
               <span class="theme-toggle-icon" aria-hidden="true"></span>
               <span class="visually-hidden" data-theme-label>Switch to light theme</span>
             </button>
-            <a class="button button-secondary" href="${sectionHref("contact")}" data-contact-target="student">Join as Intern</a>
             <a class="button button-primary" href="${sectionHref("contact")}" data-contact-target="school">Early Access</a>
           </div>
         </div>
@@ -102,7 +107,7 @@ const renderFooter = () => {
     return;
   }
 
-  const links = navSections.map((section) => `<a href="${sectionHref(section.id)}">${section.label}</a>`).join("");
+  const links = navSections.map((section) => `<a href="${navHref(section)}">${section.label}</a>`).join("");
 
   footer.className = "site-footer";
   footer.innerHTML = `

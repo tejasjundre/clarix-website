@@ -39,15 +39,17 @@ In Netlify, open **Site configuration > Environment variables** and add:
 
 ```text
 FORM_TO_EMAIL=contact@clarixdigitech.com
-SMTP_HOST=smtp.zoho.in
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your-email@clarixdigitech.com
-SMTP_PASS=your-app-password
-SMTP_FROM_EMAIL=Clarix Digitech <your-email@clarixdigitech.com>
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=contact@clarixdigitech.com
+SMTP_PASS=your-hostinger-mailbox-password
+SMTP_FROM_EMAIL=Clarix Digitech <contact@clarixdigitech.com>
 ```
 
-Use the real SMTP values from Zoho Mail, Google Workspace, Hostinger Email, SendGrid, or your email provider.
+Use the real password for the `contact@clarixdigitech.com` mailbox from Hostinger Email.
+
+After these values are added, every website enquiry submitted through `/api/enquiries` is emailed to `contact@clarixdigitech.com`. The email subject includes a Clarix reference ID like `CLX-20260812-ABC123`.
 
 ## 4. Connect your domain
 

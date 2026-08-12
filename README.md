@@ -24,12 +24,12 @@ Copy `.env.example` to `.env` and fill in your real SMTP details:
 
 ```text
 FORM_TO_EMAIL=contact@clarixdigitech.com
-SMTP_HOST=smtp.zoho.in
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your-email@clarixdigitech.com
-SMTP_PASS=your-app-password
-SMTP_FROM_EMAIL=Clarix Digitech <your-email@clarixdigitech.com>
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=contact@clarixdigitech.com
+SMTP_PASS=your-hostinger-mailbox-password
+SMTP_FROM_EMAIL=Clarix Digitech <contact@clarixdigitech.com>
 ```
 
 For local production testing:
