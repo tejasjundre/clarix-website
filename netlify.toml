@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+  # FORM_TO_EMAIL is a public contact address that is intentionally displayed
+  # on the site (contact/careers pages), so it is not a real secret.
+  SECRETS_SCAN_OMIT_KEYS = "FORM_TO_EMAIL"
 
 [functions]
   node_bundler = "esbuild"
