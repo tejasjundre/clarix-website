@@ -6,6 +6,20 @@
 [functions]
   node_bundler = "esbuild"
 
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  baseUrl = "https://clarixdigitech.com"
+
+[[plugins]]
+package = "netlify-plugin-submit-sitemap"
+
+  [plugins.inputs]
+  baseUrl = "https://clarixdigitech.com"
+  sitemapPath = "/sitemap.xml"
+  providers = ["google"]
+
 [[redirects]]
   from = "/api/enquiries"
   to = "/.netlify/functions/enquiries"

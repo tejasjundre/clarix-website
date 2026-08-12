@@ -20,6 +20,8 @@
     "nodemailer": "^9.0.3"
   },
   "devDependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
+    "netlify-plugin-submit-sitemap": "^0.4.0",
     "vite": "^8.1.0"
   }
 }
