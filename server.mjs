@@ -56,7 +56,7 @@ const smtpConfig = {
   from: readEnv("SMTP_FROM_EMAIL"),
 };
 
-const notificationEmail = readEnv("FORM_TO_EMAIL", "contact@clarixdigitech.com");
+const notificationEmail = readEnv("FORM_TO_EMAIL");
 
 let transporter;
 

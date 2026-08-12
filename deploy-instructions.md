@@ -38,18 +38,18 @@ If Git is not installed on your PC, install Git for Windows first, then restart 
 In Netlify, open **Site configuration > Environment variables** and add:
 
 ```text
-FORM_TO_EMAIL=contact@clarixdigitech.com
-SMTP_HOST=smtp.hostinger.com
+FORM_TO_EMAIL=you@example.com
+SMTP_HOST=smtp.example.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=contact@clarixdigitech.com
-SMTP_PASS=your-hostinger-mailbox-password
-SMTP_FROM_EMAIL=Clarix Digitech <contact@clarixdigitech.com>
+SMTP_USER=you@example.com
+SMTP_PASS=your-mailbox-password
+SMTP_FROM_EMAIL=Your Name <you@example.com>
 ```
 
-Use the real password for the `contact@clarixdigitech.com` mailbox from Hostinger Email.
+Use the real values for your mailbox provider, matching the address you want enquiries delivered to.
 
-After these values are added, every website enquiry submitted through `/api/enquiries` is emailed to `contact@clarixdigitech.com`. The email subject includes a Clarix reference ID like `CLX-20260812-ABC123`.
+After these values are added, every website enquiry submitted through `/api/enquiries` is emailed to the address configured in `FORM_TO_EMAIL`. The email subject includes a Clarix reference ID like `CLX-20260812-ABC123`.
 
 ## 4. Connect your domain
 
@@ -71,7 +71,7 @@ https://clarixdigitech.com
 https://clarixdigitech.com/api/health
 ```
 
-Then submit one test enquiry from the website and confirm it reaches `contact@clarixdigitech.com`.
+Then submit one test enquiry from the website and confirm it reaches the address configured in `FORM_TO_EMAIL`.
 
 ## Professional recommendation
 

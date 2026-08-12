@@ -23,13 +23,13 @@ Local development uses `server.mjs`, which can save submissions to `data/enquiri
 Copy `.env.example` to `.env` and fill in your real SMTP details:
 
 ```text
-FORM_TO_EMAIL=contact@clarixdigitech.com
-SMTP_HOST=smtp.hostinger.com
+FORM_TO_EMAIL=you@example.com
+SMTP_HOST=smtp.example.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=contact@clarixdigitech.com
-SMTP_PASS=your-hostinger-mailbox-password
-SMTP_FROM_EMAIL=Clarix Digitech <contact@clarixdigitech.com>
+SMTP_USER=you@example.com
+SMTP_PASS=your-mailbox-password
+SMTP_FROM_EMAIL=Your Name <you@example.com>
 ```
 
 For local production testing:
