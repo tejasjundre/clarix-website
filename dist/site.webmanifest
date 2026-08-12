@@ -1,0 +1,16 @@
+{
+  "name": "Clarix Digitech Private Limited",
+  "short_name": "Clarix",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0f2c",
+  "theme_color": "#0a0f2c",
+  "icons": [
+    {
+      "src": "/tab-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
