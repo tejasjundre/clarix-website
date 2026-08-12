@@ -8,7 +8,7 @@
   "theme_color": "#0a0f2c",
   "icons": [
     {
-      "src": "/clarix-logo.png",
+      "src": "/tab-logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
